@@ -1,0 +1,56 @@
+body{
+
+    background-image: url("photo-1559570278-eb8d71d06403.jpg");
+
+}
+
+header{
+
+    background-color: white;
+    opacity: 0.9;
+
+}
+
+section{
+
+    background-color: white;
+    opacity: 0.9;
+
+}
+
+h1{
+    text-align: center;
+}
+
+#nav{
+
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+
+#nav li{
+
+    display: inline;
+    list-style: none;
+
+}
+
+td{
+
+    border: black 1px solid;
+
+}
+
+.noBorder{
+
+    border: none;
+
+}
+
+.blue{
+
+    background-color: lightblue;
+
+}
