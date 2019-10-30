@@ -22,6 +22,15 @@ h1{
     text-align: center;
 }
 
+iframe{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+tbody{
+    width: 100%;
+}
+
 #nav{
 
     padding: 0;
