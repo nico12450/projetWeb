@@ -2,41 +2,43 @@
 
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>page d'acceuil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>page d'acceuil</title>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <header>
+    <header>
 
-            <span>logo cinema</span>
-            <span>Menu</span>
+        <span>logo cinema</span>
+        <span>Menu</span>
 
-        </header>
-        
-        <section>
+    </header>
 
-            <h1>Projet cinema</h1>
+    <section>
 
-        </section>
+        <h1>Projet cinema</h1>
 
-        <section>
+    </section>
 
-            <h2>Films à l'affiche</h2>
+    <section>
 
-        </section>
+        <h2>Films à l'affiche</h2>
 
-        <section>
+    </section>
 
-            <h2>Infos patiques</h2>
+    <section>
 
-            <h3>Avantages cinéma</h3>
+        <h2>Infos patiques</h2>
+
+        <h3>Avantages cinéma</h3>
+
+        <span class='halfSize'>
 
             <ol>
 
@@ -46,40 +48,96 @@
 
             </ol>
 
+        </span>
+
+        <span class='halfSize'>
+
             <h3>Tableau tarif</h3>
 
             <table>
 
                 <tr>
                     <td></td>
+                    <td colspan="2">lundi au vendredi</td>
+                    <td rowspan="2">week-end</td>
+
+                </tr>
+
+                <tr>
+
                     <td></td>
-                    <td></td>
+                    <td>de 9h à 18h</td>
+                    <td>soirée</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>-14 ans</td>
+                    <td>5€</td>
+                    <td>6€</td>
+                    <td>6€</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Plein tarif</td>
+                    <td>10€</td>
+                    <td>12€</td>
+                    <td>12.50€</td>
+
                 </tr>
 
             </table>
 
-        </section>
+        </span>
+
+    </section>
+
+    <section>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.102962020364!2d3.913155215759677!3d43.604397763602606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a57a25cf48ef%3A0xe581c03f9077dc6b!2sGaumont%20Montpellier%20Multiplexe!5e0!3m2!1sfr!2sfr!4v1572432140015!5m2!1sfr!2sfr"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+        <div id="renseignements">
+
+            <p>adresse : 235 Rue Georges Méliès, 34000 Montpellier</p>
+            <p>téléphone : 0 892 69 66 96</p>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Formulaire de contact</h2>
+
+        <form action="" method="POST">
+
+            <span class='halfSize'>
+
+                <input type="text" name="nom" id="nom" placeholder="nom"></input>
+                <input type="text" name="prenom" id="prenom" placeholder="prenom"></input>
+
+            </span>
+
+            <span class='halfSize'>
+
+                <input type="text" name="email" id="email" placeholder="email"></input>
+                <input type="text" name="telephone" id="telephone" placeholder="telephone"></input>
+
+            </span>
+
+            <input type="text" name="sujet" id="sujet" placeholder="sujet"></input>
+            <textarea name="message" id="message" placeholder="message"></textarea>
+
+        </form>
 
 
-        <section>
+    </section>
 
-
-
-        </section>
-
-        <section>
-
-            <h2>Formulaire de contact</h2>
-
-            <form action="" method="POST">
-
-               <label>nom : </label><input type = "text" name = "nom" id = "nom" aria-placeholder="nom"></input>
-
-            </form>
-
-
-        </section>
-
-    </body>
+</body>
 
 </html>
