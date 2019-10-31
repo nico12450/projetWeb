@@ -23,6 +23,11 @@ header{
     height: 50px;
     align-items: center;
     background-color: rgb(0, 112, 112);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     
 }
 
@@ -57,7 +62,7 @@ header{
     height: 40px;
 }
 
-.itemMenu:hover{
+.menuItem:hover{
 
     background-color: rgb(123, 197, 175);
     cursor: pointer;
@@ -133,13 +138,14 @@ h1{
 .afficheImage{
 
     height: 400px;
-    transition: height 1s, filter 2s;
+    transition: transform 1s, filter 2s;
 
 }
 
 
 .afficheImage:hover{
-    height: 450px;
+    /* height: 450px; */
+    transform: scale(1.1);
     filter: contrast(150%);
 }
 
@@ -164,4 +170,24 @@ td{
 #renseignements{
     background-color: white;
     flex: 1 100%;
+}
+
+#menu{
+    
+    justify-content: space-around;
+
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+footer{
+
+    margin-top: 10px;
+    min-height: 200px;
+    background-color: rgb(41, 41, 41);
+    opacity: 0.9;
+
 }
