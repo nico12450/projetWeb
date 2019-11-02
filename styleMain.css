@@ -1,0 +1,91 @@
+body{
+
+    background-color: rgba(78, 82, 131, 1);
+    font-family: 'Pathway Gothic One', sans-serif;
+
+}
+
+ul{
+
+    margin: 0px;
+    padding: 0px;
+
+}
+
+nav{
+
+    padding-left: 1vw;
+
+}
+
+.container{
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.spreaded{
+
+    justify-content: space-around;
+
+}
+
+.fullWidth{
+
+    flex-grow: 1;
+
+}
+
+#iconImage{
+
+    height: 10vh;
+
+}
+
+.itemMenuEntete{
+
+    text-align: center;
+    line-height: 9vh;
+
+}
+
+.itemMenuEntete a{
+
+    color: white;
+    text-decoration: inherit;
+    cursor: auto;
+
+}
+
+.verticallyCentered{
+
+    align-items: center;
+
+}
+
+.stretched{
+
+    align-items: stretch;
+
+}
+
+.itemMenuEntete:hover{
+
+    background-color: rgba(120, 113, 170, 1);
+    cursor: pointer;
+
+}
+
+#itemsMenuEntete{
+
+    list-style: none;
+
+}
+
+#menuEntete{
+
+    background-color: rgba(54, 5, 104, 1);
+
+}
+
