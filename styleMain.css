@@ -1,7 +1,15 @@
+@font-face{
+
+    font-family: "CustomFont";
+    src: url("BLOODY-webfont.ttf");
+
+}
+
 body{
 
     background-color: rgba(78, 82, 131, 1);
-    font-family: 'Pathway Gothic One', sans-serif;
+    font-family: 'CustomFont', sans-serif;
+    margin: 0px;
 
 }
 
@@ -15,6 +23,28 @@ ul{
 nav{
 
     padding-left: 1vw;
+
+}
+
+header{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+h1{
+
+    color: red;
+    text-align: center;
+
+}
+
+h2{
+
+    color: darkred;
+    text-align: center;
 
 }
 
@@ -47,6 +77,14 @@ nav{
 
     text-align: center;
     line-height: 9vh;
+    transition: background-color 1s;
+
+}
+
+.itemMenuEntete:hover{
+
+    background-color: rgba(120, 113, 170, 1);
+    cursor: pointer;
 
 }
 
@@ -70,10 +108,15 @@ nav{
 
 }
 
-.itemMenuEntete:hover{
+.columned{
 
-    background-color: rgba(120, 113, 170, 1);
-    cursor: pointer;
+    flex-direction: column;
+
+}
+
+.centered{
+
+    justify-self: center;
 
 }
 
@@ -86,6 +129,48 @@ nav{
 #menuEntete{
 
     background-color: rgba(54, 5, 104, 1);
+
+}
+
+#conteneurBandeau{
+
+    position: relative;
+    top: 10vh;
+
+
+}
+
+#topCentered{
+
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#bottomCentered{
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#bandeau{
+
+    height: auto;
+    max-height: 80vh;
+    width: 100vw;
+    justify-self: center;
+    transition: filter 2s;
+
+}
+
+#bandeau:hover{
+
+    filter: hue-rotate(360deg) brightness(120%);
 
 }
 
