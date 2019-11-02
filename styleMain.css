@@ -31,6 +31,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 
 }
 
@@ -88,7 +89,7 @@ h2{
 
 }
 
-.itemMenuEntete a{
+li{
 
     color: white;
     text-decoration: inherit;
@@ -123,12 +124,14 @@ h2{
 #itemsMenuEntete{
 
     list-style: none;
+    flex-wrap: nowrap;
 
 }
 
 #menuEntete{
 
     background-color: rgba(54, 5, 104, 1);
+    flex-wrap: nowrap;
 
 }
 
@@ -137,13 +140,12 @@ h2{
     position: relative;
     top: 10vh;
 
-
 }
 
 #topCentered{
 
     position: absolute;
-    top: 2%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -161,16 +163,57 @@ h2{
 #bandeau{
 
     height: auto;
-    max-height: 80vh;
+    max-height: 90vh;
     width: 100vw;
     justify-self: center;
     transition: filter 2s;
 
 }
 
+#section2{
+
+    padding-top: 10vh;
+    background-color: rgba(243, 167, 18, 1);
+
+}
+
+#conteneurAffiches{
+
+    padding-top: 10vh;
+    padding: 10px;
+    justify-content: space-evenly;
+
+}
+
 #bandeau:hover{
 
     filter: hue-rotate(360deg) brightness(120%);
+
+}
+
+.affiche{
+
+    width: 250px;
+    height: 500px;
+    transition: transform 1s, filter 2s;
+
+}
+
+.affiche:hover{
+
+    transform: scale(1.1);
+    filter: contrast(150%);
+
+}
+
+@media only screen and (max-width: 400px){
+
+    #conteneurBandeau{
+
+        position: relative;
+        top: 20vh;
+    
+    }
 
 }
 

@@ -7,11 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="styleMain.css">
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
         <title>projet Web</title>
 
     </head>
 
-    <body id = 'topPage' class = 'container'>
+    <body id = 'topPage' class = 'container columned'>
 
         <header class = 'container fullWidth'>
 
@@ -21,9 +25,9 @@
 
                 <ul id = 'itemsMenuEntete' class = 'container spreaded fullWidth'>
 
-                    <li class = 'itemMenuEntete fullWidth stretched'><a href = ''>Films a l'affiche</a></li>
-                    <li class = 'itemMenuEntete fullWidth stretched'><a href = ''>Infos pratiques</a></li>
-                    <li class = 'itemMenuEntete fullWidth stretched'><a href = ''>Contact</a></li>
+                    <a href = ''></a><li class = 'itemMenuEntete fullWidth stretched'>Films a l'affiche</li></a>
+                    <a href = ''></a><li class = 'itemMenuEntete fullWidth stretched'>Infos pratiques</li></a>
+                    <a href = ''></a><li class = 'itemMenuEntete fullWidth stretched'>Contact</li></a>
 
                 </ul>
 
@@ -31,7 +35,7 @@
 
         </header>
 
-        <div class = '' id = 'conteneurBandeau'>
+        <div class = 'container' id = 'conteneurBandeau'>
 
             <img src="bandeau.jpg" alt="" id = 'bandeau'>
 
@@ -40,7 +44,38 @@
             <h2 id = 'bottomCentered'>for blood and gloom lovers</h2>
 
         </div>
+
+        <div id  = 'section2'>
+
+            <h2>Films a l'affiche</h2>
+
+            <div class = 'container' id = 'conteneurAffiches'>
+
+
+            </div>
+
+        </div>
         
     </body>
+
+    <script>
+
+        nbAffiches = 7;
+    
+        $(document).ready(function(){
+
+            for(i = 1; i<=nbAffiches; i++){
+
+                element = "<div>" +
+                    "<img src = 'affiches/affiche" + i + ".jpg' class = 'affiche'>" +
+                    "</div>"
+
+                $('#conteneurAffiches').append(element);
+
+            }
+
+        });
+    
+    </script>
 
 </html>
