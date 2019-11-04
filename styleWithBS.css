@@ -1,0 +1,62 @@
+@font-face{
+
+    font-family: "CustomFont";
+    src: url("BLOODY-webfont.ttf");
+
+}
+
+body{
+
+    background-color: black;
+    font-family: 'CustomFont', sans-serif;
+
+}
+
+div{
+
+    background-color: white;
+    border: solid 1px;
+
+}
+
+/* nav{
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+} */
+
+.container-fluid{
+
+    padding: 0px;
+    height: 300px;
+
+}
+
+.row{
+
+    height: 100%;
+
+}
+
+.centeredText{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icone{
+
+    height: 8vh;
+
+}
+
+.affiche{
+
+    height: 80vh;
+
+}
