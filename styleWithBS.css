@@ -22,6 +22,10 @@ h2{
 h2:hover{
 
     color: rgb(87, 15, 15)!important;
+    animation: shake 0.1s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 
 }
 
@@ -64,10 +68,6 @@ h2:hover{
 
     transform: scale(1.1);
     filter: contrast(200%);
-    animation: shake 0.1s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
 
 }
 
