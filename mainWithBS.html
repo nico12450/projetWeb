@@ -28,30 +28,23 @@
 
     </div> -->
 
-    <nav class="nav nav-pills nav-fill bg-dark">
+    <nav class="nav nav-pills nav-fill fixed-top bg-dark">
 
         <a href='#home'><img src="icone.png" alt="" class='icone m-2'></a>
         <a class="nav-item nav-link centeredText" href="#affiches">Affiches</a>
-        <a class="nav-item nav-link centeredText" href="#">Infos pratiques</a>
-        <a class="nav-item nav-link centeredText" href="#">Contact</a>
+        <a class="nav-item nav-link centeredText" href="#infosPratiques">Infos pratiques</a>
+        <a class="nav-item nav-link centeredText" href="#contact">Contact</a>
 
     </nav>
 
-    <img src="bandeau.jpg" class="img-fluid" alt="Responsive image">
+    <img src="bandeau.jpg" class="img-fluid mt-5" alt="Responsive image">
 
-    <h2 id='affiches' class="text-center display-2 bg-dark text-light m-0">Affiches</h2>
+    <h2 id='affiches' class="text-center display-2 bg-dark text-light m-0">Films a l'affiche</h2>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+    <div id="#carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
         <div class="carousel-inner">
-
-
 
         </div>
 
@@ -67,6 +60,146 @@
 
     </div>
 
+    <h2 id='infosPratiques' class="text-center display-2 bg-dark text-light m-0">Infos pratiques</h2>
+
+    <div class="container pt-5 pb-5">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3>avantages cinema</h3>
+
+                <ul>
+
+                    <li>Salle climatisee</li>
+                    <li>Toutes les salles en IMAX</li>
+                    <li>Son Digital Prologic Surround</li>
+
+                </ul>
+
+            </div>
+
+            <div class="col">
+
+                <h3>Tarifs</h3>
+
+                <table>
+
+                    <tr>
+                        <td class='empty'></td>
+                        <td colspan="2" class='description'>lundi au vendredi</td>
+                        <td rowspan="2" class='description'>week-end</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class='empty'></td>
+                        <td class='description'>de 9h à 18h</td>
+                        <td class='description'>soiree</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class='description'>-14 ans</td>
+                        <td class='contenu'>5€</td>
+                        <td class='contenu'>6€</td>
+                        <td class='contenu'>6€</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class='description'>Plein tarif</td>
+                        <td class='contenu'>10€</td>
+                        <td class='contenu'>12€</td>
+                        <td class='contenu'>12.50€</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <h2 id='lieu' class="text-center display-2 bg-dark text-light m-0">Nous trouver</h2>
+
+    <div class="container pt-5 pb-5">
+
+        <div class="row">
+
+            <div class="col">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.102962020364!2d3.913155215759677!3d43.604397763602606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a57a25cf48ef%3A0xe581c03f9077dc6b!2sGaumont%20Montpellier%20Multiplexe!5e0!3m2!1sfr!2sfr!4v1572432140015!5m2!1sfr!2sfr"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+            </div>
+
+            <div class="col">
+
+                <p>adresse : 235 Rue Georges Méliès, 34000 Montpellier</p>
+                <p>téléphone : 0 892 69 66 96</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <h2 id='contact' class="text-center display-2 bg-dark text-light m-0">Nous contacter</h2>
+
+    <form class='pt-5 pb-5'>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Nom</label>
+            <input type="nom" class="form-control" id="exampleInputPassword1" placeholder="Nom">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Prenom</label>
+            <input type="prenom" class="form-control" id="exampleInputPassword1" placeholder="Prenom">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Telephone</label>
+            <input type="telephone" class="form-control" id="exampleInputPassword1" placeholder="Telephone">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Sujet</label>
+            <input type="sujet" class="form-control" id="exampleInputPassword1" placeholder="Sujet">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+
+    <footer class='containered columned text-center'>
+
+        <h3>Reseaux sociaux</h3>
+
+        <div id='iconesReseaux' class='container'>
+
+            <img src='iconesReseaux/facebook.svg' alt="" class='iconeReseau'>
+            <img src='iconesReseaux/twitter.svg' alt="" class='iconeReseau'>
+            <img src='iconesReseaux/telegram.svg' alt="" class='iconeReseau'>
+            <img src='iconesReseaux/youtube.svg' alt="" class='iconeReseau'>
+
+        </div>
+
+        <div class="footer-copyright text-center py-3">© Copyright 2019
+        </div>
+
+    </footer>
 
 
     <!-- Optional JavaScript -->

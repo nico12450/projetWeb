@@ -9,13 +9,7 @@ body{
 
     background-color: black;
     font-family: 'CustomFont', sans-serif;
-
-}
-
-div{
-
-    background-color: white;
-    border: solid 1px;
+    color: white;
 
 }
 
@@ -58,5 +52,39 @@ div{
 .affiche{
 
     height: 80vh;
+
+}
+
+.containered{
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.columned{
+
+    flex-direction: column;
+
+}
+
+.iconeReseau{
+
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+
+}
+
+.iconeReseau:hover{
+
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+#iconesReseaux{
+
+    justify-content: center;
 
 }
