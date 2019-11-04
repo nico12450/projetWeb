@@ -37,7 +37,7 @@
 
     </nav>
 
-    <img src="bandeau.jpg" class="img-fluid mt-5" alt="Responsive image">
+    <img src="bandeau.jpg" class="img-fluid mt-5" alt="Responsive image" id='bandeau'>
 
     <h2 id='affiches' class="text-center display-2 bg-dark text-light m-0">Films a l'affiche</h2>
 
@@ -57,6 +57,16 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+
+    </div>
+
+    <div class='container'>
+
+        <div class="row" id='conteneurAffiches'>
+
+
+
+        </div>
 
     </div>
 
@@ -244,9 +254,14 @@
 
                 }
 
+                element2 = "<div class = 'col-6 col-md-3'>" +
+                    "<img src = 'affiches/affiche" + i + ".jpg' class = 'd-block w-100 affiche'>" +
+                    "</div>"
+
 
 
                 $('.carousel-inner').append(element);
+                $('#conteneurAffiches').append(element2);
 
             }
 
