@@ -13,14 +13,17 @@ body{
 
 }
 
-/* nav{
-    
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+h2{
 
-} */
+    transition: color 2s;
+
+}
+
+h2:hover{
+
+    color: rgb(87, 15, 15)!important;
+
+}
 
 .container-fluid{
 
