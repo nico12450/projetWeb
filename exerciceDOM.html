@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice DOM</title>
+</head>
+
+<body>
+
+    <h1>My shopping list</h1>
+
+    <label>Enter a new item : </label><input type="text" id='item'><button id='ajout'>Add item</button>
+
+    <ul id='listeItems'></ul>
+
+    <script>
+
+        var contenu = document.querySelector('#item');
+        var items = document.querySelector('#listeItems');
+        var ajoutItem = document.querySelector('#ajout');
+
+
+        function ajoutItemToList() {
+
+            var item = document.createElement('li');
+            var texte = document.createTextNode(contenu.value + ' ');
+            var deleteElement = document.createElement('button');
+            deleteElement.setAttribute('class', 'delete');
+            deleteElement.setAttribute('onclick', 'deleteE(this)');
+            var supprimer = document.createTextNode('supprimer');
+            deleteElement.appendChild(supprimer);
+
+            item.appendChild(texte);
+            item.appendChild(deleteElement);
+            items.appendChild(item);
+
+            contenu.value = '';
+            contenu.focus();
+
+        };
+
+        ajoutItem.onclick = function () {
+
+            ajoutItemToList();
+
+        };
+
+        function deleteE(e) {
+
+            e.parentNode.parentNode.removeChild(e.parentNode);
+
+        };
+
+    </script>
+
+</body>
+
+</html>

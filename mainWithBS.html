@@ -211,20 +211,58 @@
 
     </footer>
 
-    <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+
+    <div class="modal" tabindex="-1" role="dialog" id="exampleModal" style='color : black;'>
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">Reservation</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <fieldset>
+                        <legend>Tarif</legend>
+                        <p>
+                            <label>Select tarif</label>
+                            <select id="myList1" onchange="getPrixUnitaire();getPrixTotal()">
+                                <option value="1">-14</option>
+                                <option value="2">plein tarif</option>
+                            </select>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Seance</legend>
+                        <p>
+                            <label>Select seance</label>
+                            <select id="myList2" onchange="getPrixUnitaire();getPrixTotal()">
+                                <option value="1">semaine</option>
+                                <option value="2">week end</option>
+                            </select>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Quantite</legend>
+                        <p>
+                            <label>Nombre de places</label>
+                            <input type="number" id='nbPlaces' onchange="getPrixTotal();">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Prix</legend>
+                        <p>
+                            <label>Prix unitaire : </label>
+                            <input type="text" id='prixUnitaire'>
+                        </p>
+                        <p>
+                            <label>Prix total : </label>
+                            <input type="text" id='prixTotal'>
+                        </p>
+                    </fieldset>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" onclick="ajoutReservation()">Ajouter</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -287,6 +325,67 @@
             }
 
         });
+
+        var key = 1;
+
+        function getPrixUnitaire() {
+
+            var prix = 0;
+            var choix1 = document.querySelector('#myList1').value;
+            var choix2 = document.querySelector('#myList2').value;
+
+            switch (choix1) {
+
+                case '1':
+                    prix += 5;
+                    break;
+
+                case '2':
+                    prix += 10;
+                    break;
+
+            }
+
+
+            if (choix2 == '2') {
+
+                prix += 2;
+
+            }
+
+            document.querySelector('#prixUnitaire').value = prix;
+            return prix;
+
+        }
+
+        function getPrixTotal() {
+
+            document.querySelector('#prixTotal').value = document.querySelector('#nbPlaces').value * getPrixUnitaire();
+
+        }
+
+        function ajoutReservation() {
+
+            var mytarif = document.querySelector('#myList1').value;
+            var myhoraire = document.querySelector('#myList2').value;
+            var mynbPlaces = document.querySelector('#nbPlaces').value;
+            var myprixUnitaire = document.querySelector('#prixUnitaire').value;
+            var myprixTotal = document.querySelector('#prixTotal').value;
+
+            var reservation = {
+
+                tarif: mytarif,
+                horaire: myhoraire,
+                nbPlaces: mynbPlaces,
+                prixUnitaire: myprixUnitaire,
+                prixTotal: myprixTotal
+
+            };
+
+            localStorage.setItem(key, reservation);
+            key += 1;
+
+        }
 
     </script>
 
