@@ -335,7 +335,7 @@
 
         });
 
-        var key = Object.keys(localStorage).length;
+        var key = localStorage.length;
         var tabChoix1 = ['-14', 'plein tarif'];
         var tabChoix2 = ['semaine', 'week-end'];
 
@@ -431,7 +431,9 @@
 
         function supprimerReservation() {
 
-            localStorage.removeItem(localStorage.key(Object.keys(localStorage).length - 1))
+            var last = localStorage.length - 1;
+            console.log(localStorage.length);
+            localStorage.removeItem(last)
             afficherReservations();
             key--;
 
