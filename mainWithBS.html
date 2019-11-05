@@ -260,6 +260,12 @@
                             <input type="text" id='prixTotal'>
                         </p>
                     </fieldset>
+                    <p>Reservations :</p>
+                    <div id='reservations'>
+
+
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="ajoutReservation()">Ajouter</button>
@@ -326,7 +332,11 @@
 
         });
 
-        var key = 1;
+        var key = Object.keys(localStorage).length;
+        var tabChoix1 = ['-14', 'plein tarif'];
+        var tabChoix2 = ['semaine', 'week-end'];
+
+        afficherReservations();
 
         function getPrixUnitaire() {
 
@@ -366,8 +376,8 @@
 
         function ajoutReservation() {
 
-            var mytarif = document.querySelector('#myList1').value;
-            var myhoraire = document.querySelector('#myList2').value;
+            var mytarif = tabChoix1[document.querySelector('#myList1').value - 1];
+            var myhoraire = tabChoix2[document.querySelector('#myList2').value - 1];
             var mynbPlaces = document.querySelector('#nbPlaces').value;
             var myprixUnitaire = document.querySelector('#prixUnitaire').value;
             var myprixTotal = document.querySelector('#prixTotal').value;
@@ -382,8 +392,40 @@
 
             };
 
-            localStorage.setItem(key, reservation);
+            localStorage.setItem(key, JSON.stringify(reservation));
             key += 1;
+            //afficherReservation(reservation);
+            afficherReservations();
+
+        }
+
+        function afficherReservation(reservation) {
+
+            var paragraphe = document.createElement('p');
+
+            var description = "tarif : " + reservation.tarif +
+                " seance : " + reservation.horaire +
+                " places : " + reservation.nbPlaces +
+                " prix : " + reservation.prixTotal + " €";
+
+            paragraphe.appendChild(document.createTextNode(description));
+            $('#reservations').append(paragraphe);
+
+        }
+
+        function afficherReservations() {
+
+            $('#reservations').empty();
+
+            var keys = Object.keys(localStorage);
+
+            for (k in keys) {
+
+                //console.log(localStorage.getItem(keys[k]));
+
+                afficherReservation(JSON.parse(localStorage.getItem(keys[k])));
+
+            }
 
         }
 
