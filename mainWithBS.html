@@ -268,8 +268,11 @@
 
                 </div>
                 <div class="modal-footer">
+
                     <button type="button" class="btn btn-primary" onclick="ajoutReservation()">Ajouter</button>
+                    <button type="button" class="btn btn-danger" onclick="supprimerReservation()">Supprimer</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
                 </div>
             </div>
         </div>
@@ -394,7 +397,6 @@
 
             localStorage.setItem(key, JSON.stringify(reservation));
             key += 1;
-            //afficherReservation(reservation);
             afficherReservations();
 
         }
@@ -421,11 +423,17 @@
 
             for (k in keys) {
 
-                //console.log(localStorage.getItem(keys[k]));
-
                 afficherReservation(JSON.parse(localStorage.getItem(keys[k])));
 
             }
+
+        }
+
+        function supprimerReservation() {
+
+            localStorage.removeItem(localStorage.key(Object.keys(localStorage).length - 1))
+            afficherReservations();
+            key--;
 
         }
 
